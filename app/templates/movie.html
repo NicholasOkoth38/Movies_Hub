@@ -2,6 +2,7 @@
 {% import 'macros.html' as macro%}
 <!DOCTYPE html>
 <html>
+<!-- movie page  -->
 
 <head>
     <meta charset="utf-8">
@@ -32,8 +33,7 @@
                 <a class="ratings" href="/movie/review/new/{{movie.id}}"> Write a new review</a>
 
             </div>
-            <!-- </div>
-            <div class="row"> -->
+            <!-- Reviews -->
             <div class="col-md-4">
                 <h1>Reviews</h1>
                 <hr>
@@ -46,9 +46,9 @@
 
                 <a class="btn btn-success btn-lg text-center" href="/movie/review/new/{{movie.id}}"> Write a new
                     review</a>
-                    <br><br><br>
-                    <h5>you can watch the trailer on youtube</h5>
-                    <a class="btn btn-info btn-lg text-center" href="/trailer/{{movie.id}}">View Trailer</a>
+                <br><br><br>
+                <h5>you can watch the trailer on youtube</h5>
+                <a class="btn btn-info btn-lg text-center" href="/trailer/{{movie.id}}">View Trailer</a>
                 {% endif %}
             </div>
         </div>
