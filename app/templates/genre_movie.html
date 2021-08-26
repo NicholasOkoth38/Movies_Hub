@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<title>This Genre</title>
+<div class="container-fluid">
+	<div class="row">
+		{% for movie in movies %}
+		<div class="col-md-4 col-sm-12 col-xs-12 col-lg-6 col-xl-6" style="padding: 5px;">
+			<div class="photo-card">
+				<div class="photo-background" style="background-image: url({{movie.poster}});"></div>
+				<div class="photo-details">
+					<h2 style="color: rgb(255,255,255);"><span><a class=""
+								href="/movie/{{movie.id}}">{{movie.title |truncate(35)}}</a></span></h2>
+					<h5 class="text-success card-subtitle mb-2"><b>{{ movie.vote_average }}</b> -
+						<i>{{ movie.vote_count}} votes</i></h5>
+					<p>{{movie.overview | truncate(200)}}&nbsp; </p>
+					<div class="photo-tags">
+
+						<a class="btn btn-info btn-lg text-center" href="/trailer/{{movie.id}}">Watch trailer</a>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock content %}

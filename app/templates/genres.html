@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<title>All Genres</title>
+<div class="container">
+	<div class="card" style="background-color: transparent; margin-top: 50px; border: none;">
+		<div class="card-body">
+			<div class="row">
+	{% for genre in genres %}
+	<ul class="col-md-4">
+		<li style="list-style-type: none;"><a href="{{url_for('main.genre_movies',id=genre.id)}}">{{genre.name}}</a></li>
+	</ul>
+	{% endfor %}
+</div>
+		</div>
+	</div>
+</div>
+
+			
+{% endblock content %}
