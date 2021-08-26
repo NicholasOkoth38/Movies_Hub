@@ -8,4 +8,3 @@ def mail_message(subject,template,to,**kwargs):
     email.html = render_template(template + ".html",**kwargs)
     mail.send(email)
 
-
