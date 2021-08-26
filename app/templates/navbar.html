@@ -31,7 +31,7 @@
                     </li>
                     {% if current_user.is_authenticated %}
                     <li class="dropdown nav-item"><a class="dropdown-toggle nav-link nav navbar-nav navbar-right" data-toggle="dropdown" aria-expanded="false" href="#">{{current_user.username}}</a>
-                        <div id="nav" class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{{url_for('main.profile',uname=current_user.username)}}" style="color: rgb(12, 47, 247);">Profile</a> <br><a class="dropdown-item" role="presentation" href="{{url_for('auth.logout')}}"
+                        <div id="nav" class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="{{url_for('main.profile',uname=current_user.username)}}" style="color: rgb(7, 43, 248);">Profile</a> <br><a class="dropdown-item" role="presentation" href="{{url_for('auth.logout')}}"
                                 style="color: rgb(226, 17, 17);">Logout</a></div>
                     </li>
                     {% else %}
