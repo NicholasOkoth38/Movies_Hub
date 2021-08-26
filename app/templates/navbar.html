@@ -1,52 +1,52 @@
 <!-- style navbar -->
 <style>
-   nav a,
-   a:hover {
-     color: rgb(153, 129, 129);
-   }
+  nav a,
+  a:hover {
+    color: rgb(153, 129, 129);
+  }
 
-   .navbar-brand:hover {
-     color: initial;
-   }
+  .navbar-brand:hover {
+    color: initial;
+  }
 
-   #nav {
-     text-align: center;
-   }
- </style>
- <link rel="preconnect" href="https://fonts.gstatic.com">
- <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
- <div style="font-family: 'Kaushan Script', cursive;">
-   <nav class="navbar navbar-expand-md text-left navigation-clean" style=" background-color: #313131; color: white;">
-     <div class="container"><a class="navbar-brand" href="/" style="font-family: 'Alfa Slab One', cursive;">&nbsp;<span
-           style="color: #695ca0;">Movies&nbsp;</span><span style="color: #fff;">Trends</span></a>
-       <button class="navbar-toggler " data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle
-           navigation</span><span class="navbar-toggler-icon text-light bg-success"></span></button>
-       <div class="collapse navbar-collapse" id="navcol-1">
+  #nav {
+    text-align: center;
+  }
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+<div style="font-family: 'Kaushan Script', cursive;">
+  <nav class="navbar navbar-expand-md text-left navigation-clean" style=" background-color: #313131; color: white;">
+    <div class="container"><a class="navbar-brand" href="/" style="font-family: 'Alfa Slab One', cursive;">&nbsp;<span
+          style="color: #695ca0;">Movies&nbsp;</span><span style="color: #fff;">Trends</span></a>
+      <button class="navbar-toggler " data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle
+          navigation</span><span class="navbar-toggler-icon text-light bg-success"></span></button>
+      <div class="collapse navbar-collapse" id="navcol-1">
 
-         <ul class="nav navbar-nav ml-auto">
-           <li class="nav-item" role="presentation"><a class="nav-link" href="/">Movies</a></li>
-           <li class="nav-item" role="presentation">
-             <p class="nav-link text-muted" href="/">Tv Series</p>
-           </li>
-           <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('main.genres')}}">Genres</a>
-           </li>
-           {% if current_user.is_authenticated %}
-           <li class="dropdown nav-item"><a class="dropdown-toggle nav-link nav navbar-nav navbar-right"
-               data-toggle="dropdown" aria-expanded="false" href="#">{{current_user.username}}</a>
-             <div id="nav" class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                 href="{{url_for('main.profile',uname=current_user.username)}}"
-                 style="color: rgb(12, 47, 247);">Profile</a> <br><a class="dropdown-item" role="presentation"
-                 href="{{url_for('auth.logout')}}" style="color: rgb(226, 17, 17);">Logout</a></div>
-           </li>
-           {% else %}
-           <li class="nav navbar-nav navbar-right" class="dropdown nav-item "><a class="dropdown-toggle nav-link"
-               data-toggle="dropdown" aria-expanded="false" href="{{url_for('auth.logout')}}">Logged Out</a>
-             <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
-                 href="{{url_for('auth.login')}}">Login</a></div>
-           </li>
-           {% endif %}
-         </ul>
-       </div>
-     </div>
-   </nav>
- </div>
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item" role="presentation"><a class="nav-link" href="/">Movies</a></li>
+          <li class="nav-item" role="presentation">
+            <p class="nav-link text-muted" href="/">Tv Series</p>
+          </li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="{{url_for('main.genres')}}">Genres</a>
+          </li>
+          {% if current_user.is_authenticated %}
+          <li class="dropdown nav-item"><a class="dropdown-toggle nav-link nav navbar-nav navbar-right"
+              data-toggle="dropdown" aria-expanded="false" href="#">{{current_user.username}}</a>
+            <div id="nav" class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
+                href="{{url_for('main.profile',uname=current_user.username)}}"
+                style="color: rgb(12, 47, 247);">Profile</a> <br><a class="dropdown-item" role="presentation"
+                href="{{url_for('auth.logout')}}" style="color: rgb(226, 17, 17);">Logout</a></div>
+          </li>
+          {% else %}
+          <li class="nav navbar-nav navbar-right" class="dropdown nav-item "><a class="dropdown-toggle nav-link"
+              data-toggle="dropdown" aria-expanded="false" href="{{url_for('auth.logout')}}">Logged Out</a>
+            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation"
+                href="{{url_for('auth.login')}}">Login</a></div>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
