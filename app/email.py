@@ -9,4 +9,4 @@ def mail_message(subject,template,to,**kwargs):
     mail.send(email)
 
 
-    
+
